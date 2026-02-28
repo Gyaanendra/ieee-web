@@ -1,18 +1,88 @@
 'use client';
 
 const teams = [
-  { 
-    title: 'Core Team', 
+  {
+    title: 'Core Team',
     desc: 'The driving force behind Triverse 3.0. Our core team coordinates all aspects of the event.',
     placeholder: 'Core Team group photo'
   },
-  { 
-    title: 'Technical Team', 
+  {
+    title: 'Technical Team',
     desc: 'The minds behind the technology. From website to apps, they make it all work.',
     placeholder: 'Technical Team group photo'
   },
-  { 
-    title: 'Design & Media', 
+  {
+    title: 'Design & Media',
+    desc: 'The creative minds who bring visual excellence to every aspect of Triverse.',
+    placeholder: 'Design & Media team photo'
+  },
+  {
+    title: 'Technical Team',
+    desc: 'The minds behind the technology. From website to apps, they make it all work.',
+    placeholder: 'Technical Team group photo'
+  },
+  {
+    title: 'Design & Media',
+    desc: 'The creative minds who bring visual excellence to every aspect of Triverse.',
+    placeholder: 'Design & Media team photo'
+  },
+  {
+    title: 'Technical Team',
+    desc: 'The minds behind the technology. From website to apps, they make it all work.',
+    placeholder: 'Technical Team group photo'
+  },
+  {
+    title: 'Design & Media',
+    desc: 'The creative minds who bring visual excellence to every aspect of Triverse.',
+    placeholder: 'Design & Media team photo'
+  },
+  {
+    title: 'Technical Team',
+    desc: 'The minds behind the technology. From website to apps, they make it all work.',
+    placeholder: 'Technical Team group photo'
+  },
+  {
+    title: 'Design & Media',
+    desc: 'The creative minds who bring visual excellence to every aspect of Triverse.',
+    placeholder: 'Design & Media team photo'
+  },
+  {
+    title: 'Design & Media',
+    desc: 'The creative minds who bring visual excellence to every aspect of Triverse.',
+    placeholder: 'Design & Media team photo'
+  },
+  {
+    title: 'Design & Media',
+    desc: 'The creative minds who bring visual excellence to every aspect of Triverse.',
+    placeholder: 'Design & Media team photo'
+  },
+  {
+    title: 'Design & Media',
+    desc: 'The creative minds who bring visual excellence to every aspect of Triverse.',
+    placeholder: 'Design & Media team photo'
+  },
+  {
+    title: 'Design & Media',
+    desc: 'The creative minds who bring visual excellence to every aspect of Triverse.',
+    placeholder: 'Design & Media team photo'
+  },
+  {
+    title: 'Design & Media',
+    desc: 'The creative minds who bring visual excellence to every aspect of Triverse.',
+    placeholder: 'Design & Media team photo'
+  },
+  {
+    title: 'Design & Media',
+    desc: 'The creative minds who bring visual excellence to every aspect of Triverse.',
+    placeholder: 'Design & Media team photo'
+  },
+  {
+    title: 'Design & Media',
+    desc: 'The creative minds who bring visual excellence to every aspect of Triverse.',
+    placeholder: 'Design & Media team photo'
+  },
+  {
+    title: 'Design & Media',
     desc: 'The creative minds who bring visual excellence to every aspect of Triverse.',
     placeholder: 'Design & Media team photo'
   },
