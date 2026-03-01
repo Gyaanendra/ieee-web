@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function HeroSection() {
     return (
-        <section id="hero" className="relative z-0 min-h-[90vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden border-b border-white/5">
+        <section id="hero" className="relative z-0 min-h-[min(90vh,800px)] flex flex-col items-center justify-center text-center px-4 overflow-hidden border-b border-white/5">
             {/* Subtitle Badge */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -26,7 +26,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="max-w-4xl mx-auto"
             >
-                <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-black tracking-tight leading-[1.05] text-white">
+                <h1 className="text-5xl md:text-7xl lg:text-[clamp(3rem,6vw,5.5rem)] font-black tracking-tight leading-[1.05] text-white">
                     Your Journey of <br className="hidden md:block" />
                     <span className="text-ieee-cyan">Innovation</span> Starts Here.
                 </h1>
@@ -64,7 +64,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 1 }}
-                className="absolute bottom-12 left-1/2 -translate-x-1/2"
+                className="absolute bottom-6 lg:bottom-12 left-1/2 -translate-x-1/2"
             >
                 <div className="w-5 h-8 border-2 border-white/20 rounded-full flex justify-center p-1">
                     <motion.div

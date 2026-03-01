@@ -26,8 +26,14 @@ export default function ScrollSequenceBackground() {
         const ctx = canvas.getContext('2d');
         if (!ctx) return;
 
-        let cw = canvas.width = window.innerWidth;
-        let ch = canvas.height = window.innerHeight;
+        const dpr = window.devicePixelRatio || 1;
+        let cw = window.innerWidth;
+        let ch = window.innerHeight;
+        canvas.width = cw * dpr;
+        canvas.height = ch * dpr;
+        canvas.style.width = cw + 'px';
+        canvas.style.height = ch + 'px';
+        ctx.scale(dpr, dpr);
 
         const renderFrame = (index: number) => {
             const img = images[index];
@@ -85,8 +91,14 @@ export default function ScrollSequenceBackground() {
         setTimeout(() => clearInterval(fallbackPainter), 3000);
 
         const handleResize = () => {
-            cw = canvas.width = window.innerWidth;
-            ch = canvas.height = window.innerHeight;
+            const newDpr = window.devicePixelRatio || 1;
+            cw = window.innerWidth;
+            ch = window.innerHeight;
+            canvas.width = cw * newDpr;
+            canvas.height = ch * newDpr;
+            canvas.style.width = cw + 'px';
+            canvas.style.height = ch + 'px';
+            ctx.setTransform(newDpr, 0, 0, newDpr, 0, 0);
             handleScroll();
         };
         window.addEventListener('resize', handleResize);

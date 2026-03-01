@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 export default function MissionSection() {
     return (
-        <section id="story" className="py-24 px-6 md:px-12 max-w-7xl mx-auto relative border-b border-white/5">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <section id="story" className="py-16 lg:py-24 px-6 md:px-12 max-w-7xl mx-auto relative border-b border-white/5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-24 items-center">
                 {/* Left Side: Mission Content */}
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}

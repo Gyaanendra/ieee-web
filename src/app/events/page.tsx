@@ -80,7 +80,7 @@ export default function Events() {
           className="mb-12 lg:mb-16 text-center relative z-10 px-4"
         >
           <div className="inline-block relative">
-            <h1 className="text-4xl sm:text-6xl md:text-8xl text-white font-black tracking-tight drop-shadow-2xl relative z-10 uppercase leading-snug sm:leading-tight">
+            <h1 className="text-4xl sm:text-6xl md:text-[clamp(2rem,8vw,6rem)] text-white font-black tracking-tight drop-shadow-2xl relative z-10 uppercase leading-snug sm:leading-tight">
               Glimpses <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-ieee-cyan to-ieee-blue opacity-90">
                 Of Past Events
@@ -91,7 +91,7 @@ export default function Events() {
         </motion.div>
 
         {/* Parallax Image Grid */}
-        <div className="relative z-10 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 pb-16 md:pb-24 -mb-[50px] md:-mb-[200px]">
+        <div className="relative z-10 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 pb-16 md:pb-24 -mb-[50px] md:-mb-[clamp(100px,12vw,200px)]">
           {eventsData.map((event, idx) => (
             <ParallaxCard
               key={idx}

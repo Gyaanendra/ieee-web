@@ -200,7 +200,7 @@ export default function RootLayout({
           {/* Header */}
           {isKnownRoute && (
             <header className="sticky top-0 z-50 bg-[#05050A]/90 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
-              <div className="max-w-[90rem] mx-auto px-6 h-20 flex items-center justify-between">
+              <div className="max-w-[90rem] mx-auto px-4 sm:px-6 h-14 lg:h-16 xl:h-20 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-3 group">
                   <div className="relative h-9 w-12 flex items-center justify-center transform group-hover:scale-105 transition-all">
@@ -292,21 +292,21 @@ export default function RootLayout({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.05 }}
               transition={{ duration: 0.7, ease: "easeOut" }}
-              className="relative z-20 bg-[linear-gradient(to_bottom,#0f172a_0%,#020617_100%)] border-t border-white/5 text-white pt-40 lg:pt-80 pb-6 overflow-hidden uppercase font-sans selection:bg-white selection:text-black mt-auto"
+              className="relative z-20 bg-[linear-gradient(to_bottom,#0f172a_0%,#020617_100%)] border-t border-white/5 text-white pt-[clamp(6rem,15vw,20rem)] pb-6 overflow-hidden uppercase font-sans selection:bg-white selection:text-black mt-auto"
             >
               {/* Angled White Banner with Huge Text */}
-              <div className="absolute top-[-10px] left-[-10%] w-[120%] h-[120px] lg:h-[320px] bg-white transform -rotate-3 lg:-rotate-2 origin-top-left flex items-center justify-center lg:justify-start z-10 shadow-2xl border-b-8 border-[#0f172a] lg:border-none">
+              <div className="absolute top-[-10px] left-[-10%] w-[120%] h-[clamp(80px,15vw,320px)] bg-white transform -rotate-3 lg:-rotate-2 origin-top-left flex items-center justify-center lg:justify-start z-10 shadow-2xl border-b-8 border-[#0f172a] lg:border-none">
                 <div className="w-full flex justify-center lg:justify-end lg:pr-[10%] pt-8 lg:pt-20 items-start">
-                  <h1 className="text-[#0e0e0e] font-black text-[90px] lg:text-[240px] leading-none tracking-[-0.05em] uppercase" style={{ transform: 'scaleY(1.1)' }}>
+                  <h1 className="text-[#0e0e0e] font-black text-[clamp(3rem,12vw,15rem)] leading-none tracking-[-0.05em] uppercase" style={{ transform: 'scaleY(1.1)' }}>
                     IEEE BU
                   </h1>
-                  <span className="text-black text-3xl lg:text-7xl font-black ml-2 lg:ml-6 mt-4 lg:mt-12">®</span>
+                  <span className="text-black text-[clamp(1.5rem,3vw,4.5rem)] font-black ml-2 lg:ml-6 mt-2 lg:mt-8">®</span>
                 </div>
               </div>
 
-              <div className="max-w-[100rem] mx-auto px-6 relative z-20 mt-10 lg:mt-20">
+              <div className="max-w-[100rem] mx-auto px-4 sm:px-6 relative z-20 mt-6 lg:mt-14">
                 {/* Desktop Layout */}
-                <div className="hidden lg:flex justify-between relative min-h-[500px]">
+                <div className="hidden lg:flex justify-between relative min-h-[clamp(300px,40vh,500px)]">
 
                   {/* Left Column: Contact */}
                   <div className="w-[30%] pt-12 flex flex-col justify-between">
@@ -328,7 +328,7 @@ export default function RootLayout({
                   </div>
 
                   {/* Center Graphic */}
-                  <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[550px] xl:w-[700px] pointer-events-none z-0 opacity-20">
+                  <div className="absolute left-1/2 -translate-x-1/2 bottom-[-35%] w-[clamp(300px,40vw,700px)] pointer-events-none z-0 opacity-30">
                     <Image src="/footer/Cool robot-amico.svg" alt="Footer Illustration" width={800} height={800} className="w-full h-auto object-cover drop-shadow-2xl" priority />
                   </div>
 

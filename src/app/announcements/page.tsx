@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function Announcements() {
     return (
-        <div className="min-h-[70vh] flex flex-col items-center justify-center text-center py-20 relative overflow-hidden">
+        <div className="min-h-[min(70vh,600px)] flex flex-col items-center justify-center text-center py-20 relative overflow-hidden">
             {/* Background glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-ieee-cyan/10 blur-[120px] rounded-full pointer-events-none" />
 

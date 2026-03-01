@@ -322,3 +322,46 @@ body {
 .delay-500 {
   animation-delay: 0.5s;
 }
+
+/* ===== Responsive Scaling for High-DPI / Windows 125%+ ===== */
+@media (min-resolution: 1.25dppx) {
+  html {
+    font-size: 14px; /* Scale down from 16px default to compensate for OS-level zoom */
+  }
+}
+
+@media (min-resolution: 1.5dppx) {
+  html {
+    font-size: 13px;
+  }
+}
+
+/* ===== Aspect Ratio Adjustments for 16:9 and 16:10 screens ===== */
+/* These screens are shorter relative to width, so reduce vertical spacing */
+@media (max-aspect-ratio: 16/9) {
+  :root {
+    --section-py: clamp(3rem, 6vh, 6rem);
+  }
+}
+
+@media (max-aspect-ratio: 16/10) {
+  :root {
+    --section-py: clamp(3.5rem, 7vh, 6rem);
+  }
+}
+
+/* ===== Ensure smooth scaling at any DPI ===== */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Prevent overflow at high scaling ===== */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}

@@ -13,7 +13,7 @@ export default function NotFound() {
             <motion.div
                 animate={{ y: [-15, 15, -15], rotate: [-10, -5, -10] }}
                 transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-[5%] left-[-15%] md:left-[-5%] text-[8rem] md:text-[14rem] font-black italic text-transparent [-webkit-text-stroke:2px_rgba(0,181,226,0.3)] select-none pointer-events-none tracking-tighter uppercase leading-none"
+                className="absolute top-[5%] left-[-15%] md:left-[-5%] text-[clamp(4rem,14vw,14rem)] font-black italic text-transparent [-webkit-text-stroke:2px_rgba(0,181,226,0.3)] select-none pointer-events-none tracking-tighter uppercase leading-none"
             >
                 IEEE BU<sup className="text-4xl md:text-6xl [-webkit-text-stroke:1px] relative top-[-3rem]">©</sup>
             </motion.div>
@@ -22,7 +22,7 @@ export default function NotFound() {
             <motion.div
                 animate={{ y: [10, -10, 10], rotate: [15, 20, 15] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute top-[15%] right-[-10%] md:right-[5%] bg-white text-black px-8 py-2 text-6xl md:text-8xl font-black italic select-none pointer-events-none tracking-tighter uppercase leading-none rounded-sm shadow-xl"
+                className="absolute top-[15%] right-[-10%] md:right-[5%] bg-white text-black px-8 py-2 text-[clamp(3rem,8vw,8rem)] font-black italic select-none pointer-events-none tracking-tighter uppercase leading-none rounded-sm shadow-xl"
             >
                 IEEE BU<sup className="text-2xl md:text-3xl relative top-[-2rem]">©</sup>
             </motion.div>
@@ -31,7 +31,7 @@ export default function NotFound() {
             <motion.div
                 animate={{ y: [-10, 10, -10], rotate: [20, 25, 20] }}
                 transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                className="absolute top-[32%] left-[10%] md:left-[25%] bg-[#0a1222] border border-white/5 text-zinc-400 px-6 py-2 text-5xl md:text-7xl font-black italic select-none pointer-events-none tracking-tighter uppercase leading-none rounded-sm z-10 opacity-70"
+                className="absolute top-[32%] left-[10%] md:left-[25%] bg-[#0a1222] border border-white/5 text-zinc-400 px-6 py-2 text-[clamp(2.5rem,6vw,7rem)] font-black italic select-none pointer-events-none tracking-tighter uppercase leading-none rounded-sm z-10 opacity-70"
             >
                 IEEE
             </motion.div>
@@ -40,7 +40,7 @@ export default function NotFound() {
             <motion.div
                 animate={{ y: [15, -15, 15], rotate: [-20, -15, -20] }}
                 transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                className="absolute bottom-[10%] left-[-5%] md:left-[15%] bg-ieee-cyan text-black px-10 py-3 text-7xl md:text-[8rem] font-black italic select-none pointer-events-none tracking-tighter uppercase leading-none rounded-sm shadow-[0_0_50px_rgba(0,181,226,0.4)] z-0"
+                className="absolute bottom-[10%] left-[-5%] md:left-[15%] bg-ieee-cyan text-black px-10 py-3 text-[clamp(3rem,10vw,8rem)] font-black italic select-none pointer-events-none tracking-tighter uppercase leading-none rounded-sm shadow-[0_0_50px_rgba(0,181,226,0.4)] z-0"
             >
                 IEEE BU<sup className="text-3xl md:text-5xl relative top-[-3rem]">©</sup>
             </motion.div>
@@ -49,7 +49,7 @@ export default function NotFound() {
             <motion.div
                 animate={{ y: [-20, 20, -20], rotate: [10, 25, 10] }}
                 transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                className="absolute bottom-[-5%] right-[-10%] md:right-[5%] text-[9rem] md:text-[15rem] font-black italic text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.08)] select-none pointer-events-none tracking-tighter uppercase leading-none"
+                className="absolute bottom-[-5%] right-[-10%] md:right-[5%] text-[clamp(5rem,15vw,15rem)] font-black italic text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.08)] select-none pointer-events-none tracking-tighter uppercase leading-none"
             >
                 404
             </motion.div>
@@ -58,7 +58,7 @@ export default function NotFound() {
             <motion.div
                 animate={{ scale: [1, 1.05, 1], rotate: [-10, -5, -10] }}
                 transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute top-[55%] right-[5%] md:right-[22%] bg-[#0f172a] text-zinc-300 px-8 py-3 text-6xl md:text-8xl font-black italic select-none pointer-events-none tracking-tighter uppercase leading-none rounded-sm border border-zinc-700/50 z-10 opacity-80"
+                className="absolute top-[55%] right-[5%] md:right-[22%] bg-[#0f172a] text-zinc-300 px-8 py-3 text-[clamp(3rem,8vw,8rem)] font-black italic select-none pointer-events-none tracking-tighter uppercase leading-none rounded-sm border border-zinc-700/50 z-10 opacity-80"
             >
                 IEEE BU
             </motion.div>
@@ -67,7 +67,7 @@ export default function NotFound() {
             <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                className="absolute top-[25%] left-[-15%] md:left-[-2%] w-[350px] h-[350px] md:w-[500px] md:h-[500px] select-none pointer-events-none text-ieee-cyan opacity-40 z-0"
+                className="absolute top-[25%] left-[-15%] md:left-[-2%] w-[clamp(200px,35vw,500px)] h-[clamp(200px,35vw,500px)] select-none pointer-events-none text-ieee-cyan opacity-40 z-0"
             >
                 <svg viewBox="0 0 200 200" className="w-full h-full overflow-visible">
                     <path id="circlePath1" fill="none" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
@@ -83,7 +83,7 @@ export default function NotFound() {
             <motion.div
                 animate={{ rotate: -360 }}
                 transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                className="absolute top-[40%] right-[-10%] md:right-[5%] w-[250px] h-[250px] md:w-[350px] md:h-[350px] select-none pointer-events-none text-white opacity-20 z-0 mix-blend-overlay"
+                className="absolute top-[40%] right-[-10%] md:right-[5%] w-[clamp(150px,25vw,350px)] h-[clamp(150px,25vw,350px)] select-none pointer-events-none text-white opacity-20 z-0 mix-blend-overlay"
             >
                 <svg viewBox="0 0 200 200" className="w-full h-full overflow-visible">
                     <path id="circlePath2" fill="none" d="M 100, 100 m -60, 0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0" />

@@ -25,8 +25,8 @@ const milestones = [
 
 export default function TimelineSection() {
     return (
-        <section id="roadmap" className="py-24 px-6 md:px-12 max-w-7xl mx-auto border-b border-white/5 relative">
-            <div className="text-center max-w-2xl mx-auto mb-20">
+        <section id="roadmap" className="py-16 lg:py-24 px-6 md:px-12 max-w-7xl mx-auto border-b border-white/5 relative">
+            <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-20">
                 <motion.h3
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}

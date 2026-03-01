@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function CtaSection() {
     return (
-        <section id="membership" className="py-32 px-6 md:px-12 max-w-5xl mx-auto relative">
+        <section id="membership" className="py-20 lg:py-32 px-6 md:px-12 max-w-5xl mx-auto relative">
             <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
