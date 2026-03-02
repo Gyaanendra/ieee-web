@@ -9,10 +9,10 @@ export default function MissionSection() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-24 items-center">
                 {/* Left Side: Mission Content */}
                 <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    viewport={{ once: true, margin: "-100px" }}
+                    viewport={{ once: false, amount: 0.2 }}
                     className="space-y-8"
                 >
                     <div className="space-y-4">
@@ -51,10 +51,10 @@ export default function MissionSection() {
 
                 {/* Right Side: Image Card */}
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    viewport={{ once: true, margin: "-100px" }}
+                    viewport={{ once: false, amount: 0.2 }}
                     className="relative aspect-square w-full rounded-3xl bg-gradient-to-br from-zinc-800 to-black overflow-hidden group shadow-2xl border border-white/10"
                 >
                     <Image

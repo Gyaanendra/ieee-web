@@ -6,9 +6,9 @@ export default function CtaSection() {
     return (
         <section id="membership" className="py-20 lg:py-32 px-6 md:px-12 max-w-5xl mx-auto relative">
             <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.8 }}
                 className="bg-zinc-900 border border-white/10 rounded-[2rem] p-10 md:p-16 lg:p-20 text-center relative overflow-hidden shadow-2xl"
             >

@@ -40,26 +40,26 @@ export default function LabsSection() {
         <section id="labs" className="py-16 lg:py-24 px-6 md:px-12 max-w-7xl mx-auto border-b border-white/5">
             <div className="text-center max-w-2xl mx-auto mb-16">
                 <motion.h3
-                    initial={{ opacity: 0, y: 10 }}
+                    initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false, amount: 0.2 }}
                     className="text-ieee-cyan text-xs font-bold tracking-[0.2em] uppercase mb-4"
                 >
                     Technical Societies
                 </motion.h3>
                 <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false, amount: 0.2 }}
                     transition={{ delay: 0.1 }}
                     className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6"
                 >
                     Our Labs & Tech
                 </motion.h2>
                 <motion.p
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false, amount: 0.2 }}
                     transition={{ delay: 0.2 }}
                     className="text-zinc-400 font-medium"
                 >
@@ -71,11 +71,11 @@ export default function LabsSection() {
                 {societies.map((soc, idx) => (
                     <motion.div
                         key={idx}
-                        initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-50px" }}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, amount: 0.1 }}
                         transition={{ delay: idx * 0.15, duration: 0.5 }}
-                        className="bg-[#0A0A0F] border border-white/10 rounded-3xl p-8 hover:bg-white/[0.03] hover:border-white/20 transition-all duration-300 group flex flex-col"
+                        className="bg-[#0A0A0F] border border-white/10 rounded-3xl p-8 hover:bg-white/[0.03] hover:border-white/20 transition-colors duration-300 group flex flex-col"
                     >
                         <div className="w-12 h-12 rounded-xl bg-ieee-cyan/10 border border-ieee-cyan/20 flex items-center justify-center mb-8 text-ieee-cyan">
                             {soc.icon}

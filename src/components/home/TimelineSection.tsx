@@ -28,17 +28,17 @@ export default function TimelineSection() {
         <section id="roadmap" className="py-16 lg:py-24 px-6 md:px-12 max-w-7xl mx-auto border-b border-white/5 relative">
             <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-20">
                 <motion.h3
-                    initial={{ opacity: 0, y: 10 }}
+                    initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false, amount: 0.2 }}
                     className="text-ieee-cyan text-xs font-bold tracking-[0.2em] uppercase mb-4"
                 >
                     ROADMAP
                 </motion.h3>
                 <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false, amount: 0.2 }}
                     transition={{ delay: 0.1 }}
                     className="text-4xl md:text-5xl font-black text-white"
                 >
@@ -55,9 +55,9 @@ export default function TimelineSection() {
                     {milestones.map((item, idx) => (
                         <motion.div
                             key={idx}
-                            initial={{ opacity: 0, y: 30 }}
+                            initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
+                            viewport={{ once: false, amount: 0.2 }}
                             transition={{ delay: idx * 0.2, duration: 0.6 }}
                             className={`relative flex flex-col md:flex-row items-center cursor-default group ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''
                                 }`}

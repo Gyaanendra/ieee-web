@@ -111,9 +111,20 @@ export default function ScrollSequenceBackground() {
     }, []);
 
     return (
-        <div className="fixed inset-0 w-full h-full -z-50 pointer-events-none bg-[#05050A]">
-            <canvas ref={canvasRef} className="w-full h-full opacity-60 mix-blend-lighten" />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#05050A]/10 via-[#05050A]/60 to-[#05050A]/90" />
+        <div className="fixed inset-0 w-full h-full -z-50 pointer-events-none bg-[#05050A] flex items-center justify-center overflow-hidden">
+            <canvas ref={canvasRef} className="absolute inset-0 w-full h-full opacity-60 mix-blend-lighten" />
+
+            {/* Hollow Watermark */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none select-none z-0">
+                <span
+                    className="text-[15vw] md:text-[20vw] font-black text-transparent tracking-tighter"
+                    style={{ WebkitTextStroke: '2px white' }}
+                >
+                    IEEE BU
+                </span>
+            </div>
+
+            <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#05050A]/10 via-[#05050A]/60 to-[#05050A]/90" />
         </div>
     );
 }

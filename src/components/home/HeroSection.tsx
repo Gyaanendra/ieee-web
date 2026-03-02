@@ -6,11 +6,12 @@ import Image from 'next/image';
 
 export default function HeroSection() {
     return (
-        <section id="hero" className="relative z-0 min-h-[min(90vh,800px)] flex flex-col items-center justify-center text-center px-4 overflow-hidden border-b border-white/5">
+        <section id="hero" className="relative z-0 min-h-[min(90vh,800px)] flex flex-col items-center justify-center text-center px-4 overflow-hidden ">
             {/* Subtitle Badge */}
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="mb-8"
             >
@@ -21,8 +22,9 @@ export default function HeroSection() {
 
             {/* Main Title */}
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="max-w-4xl mx-auto"
             >
@@ -34,8 +36,9 @@ export default function HeroSection() {
 
             {/* Description */}
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="mt-8 max-w-2xl mx-auto"
             >
@@ -46,8 +49,9 @@ export default function HeroSection() {
 
             {/* Buttons */}
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
             >
@@ -61,8 +65,9 @@ export default function HeroSection() {
 
             {/* Scroll Indicator */}
             <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
                 transition={{ delay: 1, duration: 1 }}
                 className="absolute bottom-6 lg:bottom-12 left-1/2 -translate-x-1/2"
             >
