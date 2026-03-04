@@ -16,14 +16,14 @@ function ParallaxCard({ event, index, containerProgress }: { event: any, index: 
   }, []);
 
   // Use a slight uniform parallax on mobile (single column) to prevent overlap,
-  // and alternating intense parallax on desktop (two columns).
-  const targetSpeed = isMobile ? -50 : (index % 2 === 0 ? 0 : -200);
+  // and opposite parallax on desktop (one up, one down).
+  const targetSpeed = isMobile ? -50 : (index % 2 === 0 ? 150 : -150);
   const yOffset = useTransform(containerProgress, (val: number) => val * targetSpeed);
 
   return (
     <motion.div
       style={{ y: yOffset }}
-      className={`relative aspect-[4/3] w-full rounded-2xl p-2 bg-white/5 backdrop-blur-sm border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden group ${index % 2 !== 0 ? 'md:mt-24' : 'md:mt-0'}`}
+      className={`relative aspect-[4/3] w-full rounded-2xl p-2 bg-white/5 backdrop-blur-sm border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden group`}
     >
       <div className="relative w-full h-full overflow-hidden rounded-xl bg-black/50">
         <Image
@@ -91,7 +91,7 @@ export default function Events() {
         </motion.div>
 
         {/* Parallax Image Grid */}
-        <div className="relative z-10 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 pb-16 md:pb-24 -mb-[50px] md:-mb-[clamp(100px,12vw,200px)]">
+        <div className="relative z-10 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 pb-32 md:pb-[200px]">
           {eventsData.map((event, idx) => (
             <ParallaxCard
               key={idx}

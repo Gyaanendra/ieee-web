@@ -4,6 +4,8 @@
   --color-ieee-blue: #00629B;
   --color-ieee-cyan: #00B5E2;
   --color-ieee-teal: #009CA6;
+  --font-sans: var(--font-neurial), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-heading: var(--font-anton), ui-sans-serif, system-ui, sans-serif;
   --animate-bounce-slow: bounce 3s infinite;
 }
 
@@ -17,6 +19,15 @@ body {
   background: #05050A;
   min-height: 100vh;
   color: #ffffff;
+  font-family: var(--font-sans);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-neurial {
+  font-family: var(--font-neurial);
 }
 
 /* Page animations */
@@ -326,7 +337,8 @@ body {
 /* ===== Responsive Scaling for High-DPI / Windows 125%+ ===== */
 @media (min-resolution: 1.25dppx) {
   html {
-    font-size: 14px; /* Scale down from 16px default to compensate for OS-level zoom */
+    font-size: 14px;
+    /* Scale down from 16px default to compensate for OS-level zoom */
   }
 }
 
