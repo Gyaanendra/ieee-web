@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ReactLenis } from '@studio-freight/react-lenis';
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis';
 import { anton, helvena, neurial } from './fonts';
 import './globals.css';
 
@@ -16,6 +16,7 @@ export default function RootLayout({
 }) {
   const pathname = usePathname();
   const router = useRouter();
+  const lenis = useLenis();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -51,8 +52,10 @@ export default function RootLayout({
     // Wait for the bars to fully cover the screen before resetting scroll and changing route
     // (0.8s duration + 0.5s max stagger = 1.3s total animation time)
     setTimeout(() => {
-      window.scrollTo(0, 0); // Scroll top right before transition finishes
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); // Snap to top underneath veil
       router.push(path);
+      // Failsafe double reset for NextJS scroll caching
+      requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }));
     }, 1300);
   }, [pathname, router]);
 
@@ -66,8 +69,24 @@ export default function RootLayout({
       if (anchor.target === '_blank' || anchor.hasAttribute('download')) return;
 
       const href = anchor.getAttribute('href');
-      // Ignore external, jump links, etc.
-      if (!href || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('#')) return;
+
+      // Handle internal section jumps smoothly (e.g. #join)
+      if (href?.startsWith('#')) {
+        e.preventDefault();
+        e.stopPropagation();
+        const targetElement = document.querySelector(href) as HTMLElement | null;
+        if (targetElement && lenis) {
+          // Lenis-aware smooth scroll (syncs with background layers natively)
+          lenis.scrollTo(targetElement);
+        } else if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+        setIsMenuOpen(false);
+        return;
+      }
+
+      // Ignore external or non-http links
+      if (!href || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
 
       if (href.startsWith('/')) {
         // Prevent default and let our transition handle it
@@ -85,8 +104,10 @@ export default function RootLayout({
   // Smooth scroll handler for anchor links
   const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
-    const targetElement = document.querySelector(targetId);
-    if (targetElement) {
+    const targetElement = document.querySelector(targetId) as HTMLElement | null;
+    if (targetElement && lenis) {
+      lenis.scrollTo(targetElement);
+    } else if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
     }
     setIsMenuOpen(false);
